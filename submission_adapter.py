@@ -7,7 +7,7 @@ code itself in this file.
 
 from __future__ import annotations
 
-from src import sft
+from src import sft, dpo
 
 
 def build_sft_batch(tokenizer, prompts, responses, max_length):
@@ -31,7 +31,7 @@ def compute_sft_loss(model, tokenizer, prompts, responses, max_length):
 def build_dpo_batch(tokenizer, prompts, chosen_responses, rejected_responses, max_length):
     """Return separate response-masked LM batches for chosen and rejected rows."""
 
-    raise NotImplementedError("Connect this adapter to your DPO batch builder")
+    return dpo.build_dpo_batch(tokenizer, prompts, chosen_responses, rejected_responses, max_length)
 
 
 def compute_dpo_loss_from_logps(
@@ -43,7 +43,13 @@ def compute_dpo_loss_from_logps(
 ):
     """Return the scalar mean DPO objective from per-example log probabilities."""
 
-    raise NotImplementedError("Connect this adapter to your tensor-level DPO loss")
+    return dpo.compute_dpo_loss_from_logps(
+        policy_chosen_logps,
+        policy_rejected_logps,
+        reference_chosen_logps,
+        reference_rejected_logps,
+        beta,
+    )
 
 
 def compute_dpo_loss(
@@ -58,4 +64,13 @@ def compute_dpo_loss(
 ):
     """Return a scalar mean DPO loss with a frozen reference computation."""
 
-    raise NotImplementedError("Connect this adapter to your DPO loss code")
+    return dpo.compute_dpo_loss(
+        policy_model,
+        reference_model,
+        tokenizer,
+        prompts,
+        chosen_responses,
+        rejected_responses,
+        beta,
+        max_length,
+    )
