@@ -12,3 +12,4 @@ checkpoints/
 *.pt
 *.bin
 .DS_Store
+data/processed/
