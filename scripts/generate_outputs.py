@@ -4,7 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+   from transformers import AutoTokenizer, AutoModelForCausalLM, LogitsProcessorList, RepetitionPenaltyLogitsProcessor
 from src.prompts import format_prompt
 
 def main():
@@ -48,7 +48,7 @@ def main():
         max_new_tokens=args.max_new_tokens,
         pad_token_id=tok.pad_token_id,
         eos_token_id=tok.eos_token_id,
-        repetition_penalty=args.repetition_penalty,
+        repetition_penalty=1.0,
         no_repeat_ngram_size=args.no_repeat_ngram_size,
     )
 
@@ -56,8 +56,13 @@ def main():
         batch = todo[i : i + args.batch_size]
         prompts = [format_prompt(b["instruction"]) for b in batch]
         enc = tok(prompts, return_tensors="pt", padding=True).to(device)
+        procs = None
+        if args.repetition_penalty != 1.0:
+            procs = LogitsProcessorList([RepetitionPenaltyLogitsProcessor(
+                penalty=float(args.repetition_penalty),
+                prompt_ignore_length=enc["input_ids"].shape[1])])
         with torch.no_grad():
-            out = model.generate(**enc, **gen_kwargs)
+            out = model.generate(**enc, **gen_kwargs, logits_processor=procs)
         new_tokens = out[:, enc["input_ids"].shape[1]:]
         texts = tok.batch_decode(new_tokens, skip_special_tokens=True)
         for b, t in zip(batch, texts):
