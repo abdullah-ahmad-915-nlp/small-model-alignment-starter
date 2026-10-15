@@ -1,0 +1,23 @@
+{
+ "judge": "google/gemini-3.6-flash",
+ "pairs": 300,
+ "judged_records": 300,
+ "dpo_wins": 139,
+ "sft_wins": 101,
+ "ties_identical": 6,
+ "ties_judge": 54,
+ "failed_unresolved": 0,
+ "win_rate_excluding_ties": 0.579,
+ "win_rate_ties_half": 0.563,
+ "sign_test_p_two_sided": 0.0167,
+ "dpo_win_rate_when_longer": 0.489,
+ "n_when_longer": 92,
+ "dpo_win_rate_when_not_longer": 0.635,
+ "n_when_not_longer": 148,
+ "position_A_win_share": 0.6,
+ "batch_size": 5,
+ "sleep_seconds": 5.0,
+ "max_retries": 3,
+ "call_mode": "direct",
+ "pairs_path": "/kaggle/input/notebooks/abd915/task6-generation-rep-penalty-kaggle/outputs/pairs_rep1.1/dpo_hh_vs_sft_hh_pairs.jsonl"
+}
