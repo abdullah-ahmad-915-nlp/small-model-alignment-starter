@@ -2,7 +2,7 @@ import argparse, json, sys
 from pathlib import Path
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, LogitsProcessorList, RepetitionPenaltyLogitsProcessor
 
 def main():
     p = argparse.ArgumentParser()
@@ -46,8 +46,12 @@ def main():
         batch = todo[i: i + args.batch_size]
         prompts = [tok.apply_chat_template([{"role": "user", "content": b["instruction"]}], tokenize=False, add_generation_prompt=True) for b in batch]
         enc = tok(prompts, return_tensors="pt", padding=True, add_special_tokens=False).to(device)
+        procs = None
+        if args.repetition_penalty != 1.0:
+            procs = LogitsProcessorList([RepetitionPenaltyLogitsProcessor(
+                penalty=float(args.repetition_penalty), prompt_ignore_length=enc["input_ids"].shape[1])])
         with torch.no_grad():
-            out = model.generate(**enc, do_sample=False, max_new_tokens=args.max_new_tokens, pad_token_id=tok.pad_token_id, eos_token_id=tok.eos_token_id, repetition_penalty=args.repetition_penalty)
+            out = model.generate(**enc, do_sample=False, max_new_tokens=args.max_new_tokens, pad_token_id=tok.pad_token_id, eos_token_id=tok.eos_token_id, repetition_penalty=1.0, logits_processor=procs)
         texts = tok.batch_decode(out[:, enc["input_ids"].shape[1]:], skip_special_tokens=True)
         for b, t in zip(batch, texts):
             done[b["id"]] = {"id": b["id"], "instruction": b["instruction"], "output": t.strip(), "generator": args.generator, "dataset": args.dataset}
