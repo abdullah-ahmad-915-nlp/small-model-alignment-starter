@@ -1,0 +1,20 @@
+{
+ "model": "Qwen/Qwen2.5-0.5B",
+ "train_path": "data/processed/sft_train.jsonl",
+ "val_path": "data/processed/sft_val.jsonl",
+ "out_dir": "/kaggle/working/outputs/sft",
+ "max_length": 512,
+ "batch_size": 2,
+ "grad_accum": 16,
+ "lr": 2e-05,
+ "warmup_ratio": 0.03,
+ "weight_decay": 0.1,
+ "clip": 1.0,
+ "epochs": 1,
+ "eval_every": 100,
+ "seed": 42,
+ "max_train_examples": null,
+ "max_val_examples": null,
+ "max_steps": null,
+ "grad_ckpt": false
+}

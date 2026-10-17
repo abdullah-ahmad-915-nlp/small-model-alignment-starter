@@ -1,0 +1,20 @@
+{
+ "sft_path": "/kaggle/input/notebooks/abd915/task3-sft-kaggle/outputs/sft/best",
+ "dataset": "uf",
+ "out_dir": "/kaggle/working/outputs/dpo_uf",
+ "beta": 0.1,
+ "lr": 1e-06,
+ "weight_decay": 0.0,
+ "clip": 1.0,
+ "max_length": 512,
+ "batch_size": 1,
+ "grad_accum": 32,
+ "epochs": 1,
+ "eval_every": 50,
+ "eval_batch": 4,
+ "seed": 42,
+ "max_train_examples": null,
+ "max_val_examples": null,
+ "max_steps": null,
+ "grad_ckpt": false
+}

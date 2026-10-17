@@ -1,0 +1,23 @@
+[
+ {
+  "id": "alpaca_eval_0",
+  "instruction": "What are the names of some famous actors that started their careers on Broadway?",
+  "output": "Some famous actors who started their careers on Broadway include:\n\n1. Tony Bennett\n2. Tony Bennett\n3. Tony Bennett\n4. Tony Bennett\n5. Tony Bennett\n6. Tony Bennett\n7. Tony Bennett\n8. Tony Bennett\n9. Tony Bennett\n10. Tony Bennett",
+  "generator": "sft",
+  "dataset": "alpaca_eval"
+ },
+ {
+  "id": "alpaca_eval_2",
+  "instruction": "Hi, my sister and her girlfriends want me to play kickball with them. Can you explain how the game is played, so they don't take advantage of me?",
+  "output": "Sure, here's how the game is played:\n\n1. The game is played on a court or field, usually with a net and a ball.\n\n2. The players take turns throwing the ball into their opponent's goal, which is usually a small area on the court.\n\n3. The ball is thrown from one player to the other, and the players must hit the ball with their hands or feet to score points.\n\n4. The game continues until one team scores 3 points or the ball is out of bounds.\n\n5. If a player misses the ball, they must take a penalty point, which is usually worth one point.\n\n6. If a player scores 3 points or more, they win the game.\n\n7. If a player misses the ball and the ball is out of bounds, the other team gets a chance to score.\n\n8. If a player scores 3 points or more, they win the game.\n\n9. If a player misses the ball and the ball is out of bounds, the other team gets a chance to score.\n\n10. If a player misses the ball and the ball is out of bounds, the other team gets a chance to score.\n\n11. If a player misses the ball and the ball is out of bounds, the other",
+  "generator": "sft",
+  "dataset": "alpaca_eval"
+ },
+ {
+  "id": "alpaca_eval_3",
+  "instruction": "What is some cool music from the 1920s?",
+  "output": "1. \"The Jazz Age\" by Louis Armstrong\n2. \"The Great Gatsby\" by D. W. Griffith\n3. \"The Jazz Singer\" by MGM\n4. \"The Jazz Singer\" soundtrack\n5. \"The Jazz Singer\" soundtrack\n6. \"The Jazz Singer\" soundtrack\n7. \"The Jazz Singer\" soundtrack\n8. \"The Jazz Singer\" soundtrack\n9. \"The Jazz Singer\" soundtrack\n10. \"The Jazz Singer\" soundtrack",
+  "generator": "sft",
+  "dataset": "alpaca_eval"
+ }
+]

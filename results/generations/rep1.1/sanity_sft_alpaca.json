@@ -1,0 +1,23 @@
+[
+ {
+  "id": "alpaca_eval_0",
+  "instruction": "What are the names of some famous actors that started their careers on Broadway?",
+  "output": "Some famous actors who started their careers on Broadway include:\n\n1. Tony Bennett\n2. Judy Garland\n3. Marlon Brando\n4. Jack Benny\n5. Shirley Bassey\n6. Joan Baez\n7. Lenny Bruce\n8. John Denver\n9. Tom Hanks\n10. David Ogilvie",
+  "generator": "sft",
+  "dataset": "alpaca_eval"
+ },
+ {
+  "id": "alpaca_eval_2",
+  "instruction": "Hi, my sister and her girlfriends want me to play kickball with them. Can you explain how the game is played, so they don't take advantage of me?",
+  "output": "Sure, here's how the game is played:\n\n1. The ball is placed in the center of the court and one player kicks it to their opponent.\n\n2. The other player catches the ball and throws it back towards their own team.\n\n3. The next player takes possession of the ball and continues to kick it back and forth until someone scores a point by getting the ball into their own goal or out of play.\n\n4. If there are no points scored within 10 seconds, the game ends in a tie.\n\n5. If there are multiple players on the court at the same time, each player has a chance to score a point by kicking the ball back and forth.\n\n6. If a player misses the ball, they must pass it to another player who can then kick it back and forth.\n\n7. If a player scores a point, they get to keep playing the ball for that round.\n\n8. If a player misses a shot, they lose their turn to play the ball.\n\n9. If a player gets caught in the air while trying to catch the ball, they must pass it to another player who can then kick it back and forth.\n\nOverall, the game is designed to be fun and exciting for everyone involved, as long as both teams have good skills",
+  "generator": "sft",
+  "dataset": "alpaca_eval"
+ },
+ {
+  "id": "alpaca_eval_3",
+  "instruction": "What is some cool music from the 1920s?",
+  "output": "1. \"The Jazz Age\" by Louis Armstrong\n2. \"The Great Gatsby\" by D.W. Griffith\n3. \"The Blue Danube Tree\" by Johann Sebastian Bach\n4. \"The Red, White and Blue\" by The Beatles\n5. \"The Sound of Music\" by Hans Zimmer\n6. \"The King's Speech\" by Laurence Olivier\n7. \"The Rite of Spring\" by Igor Stravinsky\n8. \"The Nutcracker Suite\" by Pyotr Ilyich Tchaikovsky\n9. \"The Magic Flute\" by Wolfgang Amadeus Mozart\n10. \"The Yellow Brick Road\" by The Rolling Stones",
+  "generator": "sft",
+  "dataset": "alpaca_eval"
+ }
+]

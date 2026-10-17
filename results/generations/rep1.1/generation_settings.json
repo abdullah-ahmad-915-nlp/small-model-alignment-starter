@@ -1,0 +1,16 @@
+{
+ "rep_penalty": 1.1,
+ "max_new_tokens": 256,
+ "batch_size": 16,
+ "do_sample": false,
+ "repetition_penalty_scope": "generated tokens only (prompt_ignore_length)",
+ "checkpoints": {
+  "sft": "/kaggle/input/notebooks/abd915/task3-sft-kaggle/outputs/sft/best",
+  "dpo-hh": "/kaggle/input/notebooks/abd915/task4-dpo-hh-kaggle/outputs/dpo_hh/best",
+  "dpo-uf": "/kaggle/input/notebooks/abd915/task4-dpo-uf-kaggle/outputs/dpo_uf/best"
+ },
+ "eval_sets": {
+  "alpaca": "eval_sets/alpaca_eval_300_seed42.json",
+  "hh": "eval_sets/hh_rlhf_eval_300_seed42.json"
+ }
+}

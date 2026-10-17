@@ -1,0 +1,55 @@
+{
+ "by_category": {
+  "cooking": {
+   "dpo_wins": 6,
+   "sft_wins": 0,
+   "ties": 4
+  },
+  "coding": {
+   "dpo_wins": 3,
+   "sft_wins": 0,
+   "ties": 7
+  },
+  "general_help": {
+   "dpo_wins": 4,
+   "sft_wins": 0,
+   "ties": 6
+  },
+  "safety_sensitive": {
+   "dpo_wins": 3,
+   "sft_wins": 0,
+   "ties": 7
+  }
+ },
+ "by_dpo_position": {
+  "A": {
+   "decisive": 9,
+   "dpo_win_rate": 1.0
+  },
+  "B": {
+   "decisive": 7,
+   "dpo_win_rate": 1.0
+  }
+ },
+ "judge": "google/gemini-3.6-flash",
+ "pairs": 40,
+ "judged_records": 40,
+ "dpo_wins": 16,
+ "sft_wins": 0,
+ "ties_identical": 0,
+ "ties_judge": 24,
+ "failed_unresolved": 0,
+ "win_rate_excluding_ties": 1.0,
+ "win_rate_ties_half": 0.7,
+ "sign_test_p_two_sided": 0.0,
+ "dpo_win_rate_when_longer": 1.0,
+ "n_when_longer": 9,
+ "dpo_win_rate_when_not_longer": 1.0,
+ "n_when_not_longer": 7,
+ "position_A_win_share": 0.562,
+ "batch_size": 5,
+ "sleep_seconds": 5.0,
+ "max_retries": 3,
+ "call_mode": "direct",
+ "pairs_path": "/kaggle/input/notebooks/abd915/task5-lora-persona-kaggle/outputs/pairs_persona/lora_lr5e-5_r16_e3_vs_base_pairs.jsonl"
+}

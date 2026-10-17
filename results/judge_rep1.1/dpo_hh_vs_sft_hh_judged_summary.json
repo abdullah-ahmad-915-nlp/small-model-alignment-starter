@@ -1,20 +1,82 @@
 {
+ "by_category": {
+  "calibration_and_uncertainty": {
+   "dpo_wins": 8,
+   "sft_wins": 9,
+   "ties": 13
+  },
+  "medical_safety": {
+   "dpo_wins": 8,
+   "sft_wins": 17,
+   "ties": 5
+  },
+  "harmful_instructions": {
+   "dpo_wins": 13,
+   "sft_wins": 7,
+   "ties": 10
+  },
+  "benign_helpfulness": {
+   "dpo_wins": 14,
+   "sft_wins": 15,
+   "ties": 1
+  },
+  "legal_financial_safety": {
+   "dpo_wins": 16,
+   "sft_wins": 12,
+   "ties": 2
+  },
+  "hate_or_harassment": {
+   "dpo_wins": 15,
+   "sft_wins": 7,
+   "ties": 8
+  },
+  "safe_transformation": {
+   "dpo_wins": 17,
+   "sft_wins": 7,
+   "ties": 6
+  },
+  "cyber_abuse": {
+   "dpo_wins": 19,
+   "sft_wins": 6,
+   "ties": 5
+  },
+  "privacy_and_doxxing": {
+   "dpo_wins": 14,
+   "sft_wins": 8,
+   "ties": 8
+  },
+  "self_harm_support": {
+   "dpo_wins": 16,
+   "sft_wins": 7,
+   "ties": 7
+  }
+ },
+ "by_dpo_position": {
+  "A": {
+   "decisive": 117,
+   "dpo_win_rate": 0.667
+  },
+  "B": {
+   "decisive": 118,
+   "dpo_win_rate": 0.525
+  }
+ },
  "judge": "google/gemini-3.6-flash",
  "pairs": 300,
  "judged_records": 300,
- "dpo_wins": 139,
- "sft_wins": 101,
+ "dpo_wins": 140,
+ "sft_wins": 95,
  "ties_identical": 6,
- "ties_judge": 54,
+ "ties_judge": 59,
  "failed_unresolved": 0,
- "win_rate_excluding_ties": 0.579,
- "win_rate_ties_half": 0.563,
- "sign_test_p_two_sided": 0.0167,
- "dpo_win_rate_when_longer": 0.489,
- "n_when_longer": 92,
- "dpo_win_rate_when_not_longer": 0.635,
- "n_when_not_longer": 148,
- "position_A_win_share": 0.6,
+ "win_rate_excluding_ties": 0.596,
+ "win_rate_ties_half": 0.575,
+ "sign_test_p_two_sided": 0.004,
+ "dpo_win_rate_when_longer": 0.511,
+ "n_when_longer": 88,
+ "dpo_win_rate_when_not_longer": 0.646,
+ "n_when_not_longer": 147,
+ "position_A_win_share": 0.57,
  "batch_size": 5,
  "sleep_seconds": 5.0,
  "max_retries": 3,

@@ -1,20 +1,31 @@
 {
+ "by_category": {},
+ "by_dpo_position": {
+  "A": {
+   "decisive": 119,
+   "dpo_win_rate": 0.571
+  },
+  "B": {
+   "decisive": 120,
+   "dpo_win_rate": 0.383
+  }
+ },
  "judge": "google/gemini-3.6-flash",
  "pairs": 300,
  "judged_records": 300,
- "dpo_wins": 112,
- "sft_wins": 122,
+ "dpo_wins": 114,
+ "sft_wins": 125,
  "ties_identical": 17,
- "ties_judge": 49,
+ "ties_judge": 44,
  "failed_unresolved": 0,
- "win_rate_excluding_ties": 0.479,
- "win_rate_ties_half": 0.483,
- "sign_test_p_two_sided": 0.5564,
- "dpo_win_rate_when_longer": 0.459,
- "n_when_longer": 183,
- "dpo_win_rate_when_not_longer": 0.549,
- "n_when_not_longer": 51,
- "position_A_win_share": 0.56,
+ "win_rate_excluding_ties": 0.477,
+ "win_rate_ties_half": 0.482,
+ "sign_test_p_two_sided": 0.5178,
+ "dpo_win_rate_when_longer": 0.463,
+ "n_when_longer": 190,
+ "dpo_win_rate_when_not_longer": 0.531,
+ "n_when_not_longer": 49,
+ "position_A_win_share": 0.594,
  "batch_size": 5,
  "sleep_seconds": 5.0,
  "max_retries": 3,
